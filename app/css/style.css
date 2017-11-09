@@ -211,7 +211,6 @@ body .top>.navDiv>div>ul>.active{
 }
 /*****************************************一：顶部结束********************************/
 
-
 /*****************************************二：中部开始********************************/
 body .wrap>.middle{
     height: auto;
@@ -327,7 +326,6 @@ body .wrap>.middle>.ad>.rightLogin>.loginContainer>.title>span:last-child{
 body .wrap>.middle>.ad>.leftImg{
     height: 100%;
     width: 100%;
-    /*background: #808080;*/
     float: left;
     background-image: url("../images/ad.png");
     background-repeat: no-repeat;
@@ -417,7 +415,6 @@ body .wrap>.middle>.mqcgzs>.mqcgzs_content>.line>div:nth-child(2){
     position: relative;
     box-sizing: border-box;
     width: 22%;
-    /*background: blue;*/
     float: left;
     height: 100%;
     background-image: url("../images/wallet.png");
@@ -452,8 +449,6 @@ body .wrap>.middle>.mqcgzs>.mqcgzs_content>.line>div:nth-child(2)>div>span:nth-c
     font-size: 14px;
     color: #333333;
 }
-
-
 body .wrap>.middle>.mqcgzs>.mqcgzs_content>.line>div:nth-child(3){
     position: relative;
     box-sizing: border-box;
