@@ -144,7 +144,7 @@ class Top extends Component{
 Top.defaultProps = {
     loginDiv:["你好，请登录","免费注册","|","我是采购商","|","我是供应商","|"],
     nav:[{
-        "name":"首页1",
+        "name":"我的首页",
         "select":true,
     },{
         "name":"采购公告",
