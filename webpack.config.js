@@ -6,21 +6,24 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 //自动打包方式，执行webpack就可以了。
 module.exports = {
-    entry:  __dirname + "/app/main.js",//已多次提及的唯一入口文件
+    //已多次提及的唯一入口文件
+    entry:  __dirname + "/app/main.js",
     output: {
-        path: __dirname + "/build",//打包后的文件存放的地方
-        filename: "bundle-[hash].js"//添加特殊的字符串混合体（[name], [id] and [hash]）到输出文件名前//现在可以合理使用缓存了。
+        //打包后的文件存放的地方
+        path: __dirname + "/build",
+        //添加特殊的字符串混合体（[name], [id] and [hash]）到输出文件名前//现在可以合理使用缓存了。
+        filename: "bundle-[hash].js"
     },
     devtool:'source-map',
     devServer:{
+        //默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到“public"目录）
         contentBase:"./public",
+        //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
         historyApiFallback:true,
-        port:8080,
-        inline:true
-        //contentBase 默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到“public"目录）
         //port 设置默认监听端口，如果省略，默认为”8080“
+        port:8080,
         //inline 设置为true，当源文件改变时会自动刷新页面
-        //historyApiFallback 在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
+        inline:true
     },
     module: {
         rules: [
@@ -57,7 +60,7 @@ module.exports = {
             {
                 // 图片加载器
                 test:/\.(png|jpg|gif|jpeg)$/,
-                loader:'url-loader?limit=167936' //8K以内的图片均转换成base64格式
+                loader:'url-loader?limit=167936' //164K以内的图片均转换成base64格式
             },
         ]
     },
