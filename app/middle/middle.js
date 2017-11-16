@@ -9,11 +9,73 @@ import React, {Component} from 'react'
  */
 var middleData = require('./middleData.json');
 class Middle extends Component{
+
+    //每隔3秒通过改变组件的status来更换背景图片
+    componentDidMount(){
+        var that = this;
+        setInterval(function(){
+            that.handlelunboBtnClick(2);
+        },3000)
+    }
+
+    /**
+     * 构造函数设置props和state属性
+     */
+    constructor(props){
+        super(props);
+        this.state = {
+            index: 1,
+        };
+    }
+
+    /**
+     * 点击轮播组件左侧按钮
+     *  type:1 左侧按钮
+     *       2 右侧按钮
+     */
+    handlelunboBtnClick(type){
+        var no = 1;
+        if(type == 1){ //左边按钮
+            if(this.state.index == 1){
+                no = 5;
+            }else{
+                no = this.state.index - 1
+            }
+        }else if(type == 2){ //右边按钮
+            if(this.state.index == 5){
+                no = 1;
+            }else{
+                no = this.state.index + 1
+            }
+        }
+        this.setState({
+            index:no
+        });
+    }
+
+    handlelunboListBtnClick(liIndex){
+        this.setState({
+            index:liIndex
+        });
+    }
+
     render() {
         return (
             <div className="middle">
                 <div className="ad">
-                    <div className="leftImg"></div>
+                    <div className={"leftImg adImg" + this.state.index }>
+                        <span className="leftBtn icon iconfont"  onClick={this.handlelunboBtnClick.bind(this,1)}>&#xe697;</span>
+                        <span className="rightBtn icon iconfont" onClick={this.handlelunboBtnClick.bind(this,2)}>&#xe6a7;</span>
+                        <div className="listBtn">
+                            <ul>
+                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,1)}  className={this.state.index == 1 ? 'active' : ''}></li>
+                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,2)}  className={this.state.index == 2 ? 'active' : ''}></li>
+                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,3)}  className={this.state.index == 3 ? 'active' : ''}></li>
+                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,4)}  className={this.state.index == 4 ? 'active' : ''}></li>
+                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,5)}  className={this.state.index == 5 ? 'active' : ''}></li>
+                            </ul>
+                        </div>
+                    </div>
                     <div className="rightLogin">
                         <div className="notice">欢迎您，登录后您将享受更丰富的服务</div>
                         <div className="loginBtn">
@@ -88,7 +150,7 @@ class Middle extends Component{
                             function(item,i){
                                 return <div className="line" key={i}>{
                                     item.map(function(subitem,j){
-                                        return <div className="block" key={j}>
+                                        return <div title={subitem.detail} className="block" key={j}>
                                             <div className="img" title={subitem.detail}></div>
                                             <div className="detail">
                                                 {subitem.detail}

@@ -59,7 +59,7 @@ module.exports = {
                 loader: 'style-loader!css-loader!less-loader'},
             {
                 // 图片加载器
-                test:/\.(png|jpg|gif|jpeg)$/,
+                test:/\.(png|jpg|gif|jpeg|woff|eot|ttf|svg)$/,
                 loader:'url-loader?limit=167936' //164K以内的图片均转换成base64格式
             },
         ]
@@ -68,7 +68,7 @@ module.exports = {
         new webpack.BannerPlugin('版权所有，翻版必究'), //一旦打开就报错
         new HtmlWebpackPlugin({
             template: __dirname + "/app/index.tmpl.html",//new 一个这个插件的实例，并传入相关的参数
-            minify: { removeAttributeQuotes: true }, //minify:true 会报错：ERROR in TypeError: Cannot use 'in' operator to search for 'html5' in true
+            // minify: { removeAttributeQuotes: true }, //minify:true 会报错：ERROR in TypeError: Cannot use 'in' operator to search for 'html5' in true
             title: '陈超阳-homework',
         }),
         new webpack.optimize.UglifyJsPlugin({
