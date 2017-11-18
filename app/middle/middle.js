@@ -15,7 +15,8 @@ class Middle extends Component{
         var that = this;
         setInterval(function(){
             that.handlelunboBtnClick(2);
-        },3000)
+        },3000);
+        //$('.cgzc_content').animate({scrollTop:$('.cgzc_content .bottomSymtom').offset().top}, 12000);
     }
 
     /**
@@ -232,6 +233,7 @@ class Middle extends Component{
                                       }
                                   )}
                               </ul>
+                              <span class="bottomSymtom"></span>
                           </div>
                       </div>
 

@@ -15,7 +15,15 @@ class LoginDiv extends Component{
                         {this.props.data.map(
                             function(item,i){
                                 if(i == 0 || i == 1 || i == 3 || i == 5){
-                                    return <li className="menu" key={i}>{item}</li>
+                                    //return <li className="menu icon iconfont" key={i}>{item}&#xe6a6;</li>
+                                    if(i == 3 || i == 5){
+                                        return <li className="menu" key={i}>
+                                                    {item}
+                                                    <em className="icon iconfont2">&#xe6a6;</em>
+                                                </li>
+                                    }else{
+                                        return <li className="menu" key={i}>{item}</li>
+                                    }
                                 }else{
                                     return  <li key={i}>{item}</li>
                                 }

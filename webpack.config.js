@@ -71,6 +71,9 @@ module.exports = {
             // minify: { removeAttributeQuotes: true }, //minify:true 会报错：ERROR in TypeError: Cannot use 'in' operator to search for 'html5' in true
             title: '陈超阳-homework',
         }),
+        new webpack.ProvidePlugin({
+            $:'jquery'
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
