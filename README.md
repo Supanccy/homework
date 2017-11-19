@@ -19,6 +19,8 @@
 3. 大幅图片轮播功能组件
 4. 登录区域的二级菜单
 
+![](./showImg/login2level.gif)
+
 [项目显示地址](http://112.74.36.152/homework/build/index.html)
 
 ## 三作者联系方式
