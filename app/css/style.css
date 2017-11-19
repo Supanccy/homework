@@ -38,7 +38,7 @@ body .up{
     border-radius: 14px;
     background: #BBBBBB;
     bottom: 50px;
-    right: 30px;
+    right: 10px;
     text-align: center;
     line-height: 50px;
     border: 1px solid #dddddd;
@@ -95,13 +95,74 @@ body .top>.loginDiv>div>ul>.menu{
 body .top>.loginDiv>div>ul>.menu:hover{
     color: #0080ff;
 }
+body .top>.loginDiv>div>ul>.menu:hover .secondMenu1{
+    display: block;
+}
+body .top>.loginDiv>div>ul>.menu:hover .secondMenu2{
+    display: block;
+}
 body .top>.loginDiv>div>ul>li{
+    position: relative;
     float: left;
     height: 100%;
     line-height: 30px;
     padding-left: 5px;
     padding-right: 5px;
 }
+body .top>.loginDiv>div>ul>li>.secondMenu1{
+    position: absolute;
+    top: 29px;
+    left: -7px;
+    width: 135px;
+    height: 164px;
+    z-index: 999;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    display: none;
+    box-sizing: border-box;
+    padding: 10px;
+}
+body .top>.loginDiv>div>ul>li>.secondMenu2{
+    position: absolute;
+    top: 29px;
+    left: -42px;
+    width: 135px;
+    height: 164px;
+    z-index: 999;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    display: none;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+body .top>.loginDiv>div>ul>li dl,dt,dd{
+    margin: 0;
+    padding: 0;
+    color: #999999;
+}
+body .top>.loginDiv>div>ul>li dt{
+    font-weight: bold;
+    color: #666666;
+}
+body .top>.loginDiv>div>ul>li dd>span:hover{
+    color:#0080ff;
+}
+body .top>.loginDiv>div>ul>li dt,dd{
+    height: 24px;
+    line-height: 24px;
+}
+body .top>.loginDiv>div>ul>li dd>span:nth-child(1){
+    float: left;
+}
+body .top>.loginDiv>div>ul>li dd>span:nth-child(2){
+    float: right;
+}
+
+
+/*body .top>.loginDiv>div>ul>li>:hover .secondMenu{*/
+    /*display: block;*/
+/*}*/
 body .top>.searchDiv{
     position: relative;
     width: 100%;
@@ -195,6 +256,10 @@ body .top>.searchDiv>div>.searchInput>.searchBorder>.inputDiv>input{
     color: #888888;
     padding-left: 5px;
     border: 0;
+}
+body .top>.searchDiv>div>.searchInput>.searchBorder>.inputDiv>input:focus{
+    color: red;
+    content: "";
 }
 body .top>.searchDiv>div>.searchInput>.searchBorder>.searchButton{
     width: 70px;
@@ -998,8 +1063,7 @@ body .wrap>.middle>.zxcgqk>.zxcgqk_content>table{
     font-size: 12px;
     color: #333333;
     border:0;
-    cellspacing:0;
-    cellpadding:0;
+    border-collapse: collapse;
 }
 body .wrap>.middle>.zxcgqk>.zxcgqk_content>table tr{
     background: #F5F5F5;

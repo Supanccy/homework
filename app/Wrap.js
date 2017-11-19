@@ -54,6 +54,11 @@ class UpHuoJian extends  Component{
 }
 
 class Wrap extends Component{
+
+    componentWillMount(){
+        document.title = "前端作业--陈超阳"
+    }
+
     render() {
         return (
             <div>

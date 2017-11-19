@@ -20,6 +20,17 @@ class LoginDiv extends Component{
                                         return <li className="menu" key={i}>
                                                     {item}
                                                     <em className="icon iconfont2">&#xe6a6;</em>
+                                                    <div className={ i == 3?'secondMenu1':'secondMenu2'}>
+                                                         <dl>
+                                                             <dt>客户</dt>
+                                                             <dd><span>帮助中心</span><span>帮助中心</span></dd>
+                                                             <dd><span>售后服务</span><span>售后服务</span></dd>
+                                                             <dt>商户</dt>
+                                                             <dd><span>意见建议</span><span>意见建议</span></dd>
+                                                             <dd><span>电话客服</span><span>电话客服</span></dd>
+                                                         </dl>
+
+                                                    </div>
                                                 </li>
                                     }else{
                                         return <li className="menu" key={i}>{item}</li>
@@ -54,7 +65,7 @@ class SearchDiv extends Component{
                         </div>
                         <div className="searchBorder">
                              <span className="inputDiv">
-                                 <input type="text" defaultValue="输入求购信息（JXYFOREVER）"/>
+                                 <input type="text" defaultValue="输入求购信息"/>
                              </span>
                             <span className="searchButton">搜索</span>
                         </div>
