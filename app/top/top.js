@@ -51,6 +51,37 @@ class LoginDiv extends Component{
  * 顶部区域搜索区域组件
  */
 class SearchDiv extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            inputFocus: false
+        };
+    }
+
+    /**
+     * 点击搜索按钮触发处理函数
+     */
+    handSearch(){
+
+
+    }
+    handOnfocus(){
+        this.setState({
+            inputFocus: true
+        });
+    }
+    handOnBlur(){
+        this.setState({
+            inputFocus: false
+        });
+    }
+
+    handChange(){
+      console.log(333)
+    }
+
+
     render(){
         return (
             <div className="searchDiv">
@@ -65,9 +96,9 @@ class SearchDiv extends Component{
                         </div>
                         <div className="searchBorder">
                              <span className="inputDiv">
-                                 <input type="text" defaultValue="输入求购信息"/>
+                                 <input onChange={this.handChange.bind(this)} type="text" value={this.state.inputFocus == true ? '' : '输入求购信息'} onFocus={this.handOnfocus.bind(this)} onBlur={this.handOnBlur.bind(this)}/>
                              </span>
-                            <span className="searchButton">搜索</span>
+                            <span className="searchButton" onClick={this.handSearch.bind(this)}>搜索</span>
                         </div>
                     </div>
                 </div>

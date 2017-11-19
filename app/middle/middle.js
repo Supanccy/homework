@@ -233,7 +233,7 @@ class Middle extends Component{
                                       }
                                   )}
                               </ul>
-                              <span class="bottomSymtom"></span>
+                              <span className="bottomSymtom"></span>
                           </div>
                       </div>
 

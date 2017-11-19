@@ -50,7 +50,7 @@ class FixSearch extends Component{
                         </div>
                         <div className="searchBorder2">
                              <span className="inputDiv2">
-                                 <input type="text" defaultValue="输入求购信息（JXYFOREVER）"/>
+                                 <input type="text" defaultValue="输入求购信息"/>
                              </span>
                             <span className="searchButton2">搜索</span>
                         </div>
