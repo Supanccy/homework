@@ -78,9 +78,33 @@ class SearchDiv extends Component{
     }
 
     handChange(){
-      console.log(333)
+        console.log(333)
+        return true
     }
 
+
+    debounce(fn, delay) {
+        let timer;
+        // 维护一个 timer
+        if(timer){
+            clearTimeout(this.timer);
+        }else{
+            timer = setTimeout(function() {
+               fn();
+            }, delay);
+        }
+        // let timer = null;
+        // return function() {
+        //     // 通过 ‘this’ 和 ‘arguments’ 获取函数的作用域和变量
+        //     let context = this;
+        //     let args = arguments;
+        //
+        //     clearTimeout(timer);
+        //     timer = setTimeout(function() {
+        //         fn.apply(context, args);
+        //     }, delay);
+        // }
+    }
 
     render(){
         return (
@@ -96,7 +120,7 @@ class SearchDiv extends Component{
                         </div>
                         <div className="searchBorder">
                              <span className="inputDiv">
-                                 <input onChange={this.handChange.bind(this)} type="text" value={this.state.inputFocus == true ? '' : '输入求购信息'} onFocus={this.handOnfocus.bind(this)} onBlur={this.handOnBlur.bind(this)}/>
+                                 <input onChange={this.debounce.bind(this,this.handChange,2000)} type="text" defaultValue={this.state.inputFocus == true ? '' : '输入求购信息'} onFocus={this.handOnfocus.bind(this)} onBlur={this.handOnBlur.bind(this)}/>
                              </span>
                             <span className="searchButton" onClick={this.handSearch.bind(this)}>搜索</span>
                         </div>
