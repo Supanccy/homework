@@ -8,7 +8,7 @@
 5. 打包执行 npm start
 
 ## 二 目录结构说明
-![](./showImg/mulu.gif)
+![](./showImg/mulu.png)
 
 
 ## 三 项目技术栈
