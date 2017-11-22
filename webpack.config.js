@@ -75,11 +75,11 @@ module.exports = {
         new webpack.ProvidePlugin({
             $:'jquery'
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        }), //压缩js文件的插件，不引入的话，生成的js文件有2万多行
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     }
+        // }), //压缩js文件的插件，不引入的话，生成的js文件有2万多行
 
     ]
 

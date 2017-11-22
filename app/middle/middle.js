@@ -3,7 +3,6 @@
  */
 import React, {Component} from 'react'
 
-
 /**
  * 中部区域组件（包括广告，名企推荐爆品 最新采购情况  采购政策  行业资讯  答疑解惑等）
  */
@@ -16,7 +15,6 @@ class Middle extends Component{
         setInterval(function(){
             that.handlelunboBtnClick(2);
         },3000);
-        //$('.cgzc_content').animate({scrollTop:$('.cgzc_content .bottomSymtom').offset().top}, 12000);
     }
 
     /**

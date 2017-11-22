@@ -1,5 +1,7 @@
 /*css代码统一写到该文件当中*/
-/*****************************************一：顶部开始********************************/
+
+
+/*****************************************一：顶部组件样式开始********************************/
 html,body{
     margin: 0;
     padding: 0;
@@ -159,10 +161,6 @@ body .top>.loginDiv>div>ul>li dd>span:nth-child(2){
     float: right;
 }
 
-
-/*body .top>.loginDiv>div>ul>li>:hover .secondMenu{*/
-    /*display: block;*/
-/*}*/
 body .top>.searchDiv{
     position: relative;
     width: 100%;
@@ -203,7 +201,6 @@ body .top>.searchDiv>div>.searchInput{
 }
 body .top>.searchDiv>div>.searchInput>.searchType{
     height: 20px;
-    /*background: red;*/
     line-height: 20px;
 }
 body .top>.searchDiv>div>.searchInput>.searchType>ul{
@@ -513,7 +510,6 @@ body .wrap>.middle>.ad>.leftImg:hover .rightBtn{
     opacity: 0.3;
 }
 
-
 @font-face {font-family: "iconfont";
     src: url(./iconfont/iconfont.eot); /* IE9*/
     src: url(./iconfont/iconfont.eot#iefix) format('embedded-opentype'),
@@ -537,12 +533,10 @@ body .wrap>.middle>.ad>.leftImg:hover .rightBtn{
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
-
     display: inline-block;
     height: 30px;
     line-height: 30px;
 }
-
 
 body .wrap>.middle>.ad>.leftImg>.leftBtn{
     position: absolute;
@@ -656,7 +650,6 @@ body .wrap>.middle>.mqcgzs>.mqcgzs_content>.line>div:nth-child(1)>div>span:nth-c
     font-size: 12px;
     color: #333333;
 }
-
 
 body .wrap>.middle>.mqcgzs>.mqcgzs_content>.line>div:nth-child(2){
     position: relative;
@@ -1009,7 +1002,6 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:last-child{
     margin-right: 0;
 }
 
-
 body .wrap>.middle>.zxcgqk{
     height: auto;
     margin-bottom: 10px;
@@ -1255,7 +1247,6 @@ body .wrap>.middle>.cgzcContainer>.cgzc>.cgzc_content>ul>li>span:last-child:hove
 /**行业资讯---end*/
 body .wrap>.middle>.cgzcContainer>.hyzx{
     height: auto;
-    /*margin-bottom: 10px;*/
     width: calc((100% - 20px)/3);
     display: inline-block;
     margin-right: 11px;
@@ -1346,7 +1337,6 @@ body .wrap>.middle>.cgzcContainer>.hyzx>.hyzx_content>.line:last-child{
 /**行业资讯end*/
 body .wrap>.middle>.cgzcContainer>.dyjh{
     height: auto;
-    /*margin-bottom: 10px;*/
     width: calc((100% - 20px)/3);
     display: inline-block;
 }

@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 
 
 /**
- * 底部页脚组件（显示公司名称和链接）
+ * 底部子组件1--底部页脚组件（显示公司名称和链接）
  */
 class Footer extends Component{
     render(){
@@ -19,7 +19,7 @@ class Footer extends Component{
 }
 
 /**
- * 底部友情链接区域组件
+ * 底部子组件2--底部友情链接区域组件
  */
 class BottomContent extends Component{
     render(){
