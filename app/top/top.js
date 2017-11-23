@@ -18,20 +18,20 @@ class LoginDiv extends Component{
                                     //return <li className="menu icon iconfont" key={i}>{item}&#xe6a6;</li>
                                     if(i == 3 || i == 5){
                                         return <li className="menu" key={i}>
-                                                    {item}
-                                                    <em className="icon iconfont2">&#xe6a6;</em>
-                                                    <div className={ i == 3?'secondMenu1':'secondMenu2'}>
-                                                         <dl>
-                                                             <dt>客户</dt>
-                                                             <dd><span>帮助中心</span><span>帮助中心</span></dd>
-                                                             <dd><span>售后服务</span><span>售后服务</span></dd>
-                                                             <dt>商户</dt>
-                                                             <dd><span>意见建议</span><span>意见建议</span></dd>
-                                                             <dd><span>电话客服</span><span>电话客服</span></dd>
-                                                         </dl>
+                                            {item}
+                                            <em className="icon iconfont2">&#xe6a6;</em>
+                                            <div className={ i == 3?'secondMenu1':'secondMenu2'}>
+                                                <dl>
+                                                    <dt>客户</dt>
+                                                    <dd><span>帮助中心</span><span>帮助中心</span></dd>
+                                                    <dd><span>售后服务</span><span>售后服务</span></dd>
+                                                    <dt>商户</dt>
+                                                    <dd><span>意见建议</span><span>意见建议</span></dd>
+                                                    <dd><span>电话客服</span><span>电话客服</span></dd>
+                                                </dl>
 
-                                                    </div>
-                                                </li>
+                                            </div>
+                                        </li>
                                     }else{
                                         return <li className="menu" key={i}>{item}</li>
                                     }
@@ -55,7 +55,8 @@ class SearchDiv extends Component{
     constructor(props){
         super(props);
         this.state = {
-            inputFocus: false
+            inputFocus: false,
+            selectType:1
         };
     }
 
@@ -63,8 +64,7 @@ class SearchDiv extends Component{
      * 点击搜索按钮触发处理函数
      */
     handSearch(){
-
-
+        alert(3)
     }
     handOnfocus(){
         this.setState({
@@ -90,7 +90,7 @@ class SearchDiv extends Component{
             clearTimeout(this.timer);
         }else{
             timer = setTimeout(function() {
-               fn();
+                fn();
             }, delay);
         }
         // let timer = null;
@@ -106,6 +106,16 @@ class SearchDiv extends Component{
         // }
     }
 
+    /**
+     * 处理选择求购和产品信息
+     * @param type
+     */
+    hadSelectType(type){
+        this.setState({
+            selectType: type
+        });
+    }
+
     render(){
         return (
             <div className="searchDiv">
@@ -114,8 +124,8 @@ class SearchDiv extends Component{
                     <div className="searchInput">
                         <div className="searchType">
                             <ul>
-                                <li className="active">求购</li>
-                                <li>产品</li>
+                                <li onClick={this.hadSelectType.bind(this,1)} className={this.state.selectType == 1 ? 'active' : ''}>求购</li>
+                                <li onClick={this.hadSelectType.bind(this,2)} className={this.state.selectType == 2 ? 'active' : ''}>产品</li>
                             </ul>
                         </div>
                         <div className="searchBorder">
@@ -174,6 +184,7 @@ class NavDiv extends Component{
  * 页面顶部组件（包含登录条，搜索框，一级菜单）
  */
 class Top extends Component{
+
     /**
      * 顶部区域主组件
      */
@@ -184,7 +195,7 @@ class Top extends Component{
                 <SearchDiv />
                 <NavDiv data={this.props.nav}/>
             </div>
-            );
+        );
     }
 
     shouldComponentUpdate(newProps, newState) {
