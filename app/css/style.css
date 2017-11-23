@@ -835,6 +835,10 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block{
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:hover{
     border: 1px solid #0081FF;
 }
+
+body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:hover .img{
+    background-size: 110% 110%;
+}
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block>.img{
     box-sizing: border-box;
     height: 222px;
