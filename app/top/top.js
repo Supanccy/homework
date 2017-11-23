@@ -174,7 +174,6 @@ class NavDiv extends Component{
  * 页面顶部组件（包含登录条，搜索框，一级菜单）
  */
 class Top extends Component{
-
     /**
      * 顶部区域主组件
      */
