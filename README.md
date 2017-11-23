@@ -1,4 +1,9 @@
 # 项目说明文档
+[PC端访问地址（内外网均可访问）](http://112.74.36.152/homework/build/index.html)
+  
+手机端访问请扫描下面二维码  
+![](./showImg/erweima.png)
+
 
 ## 一 运行说明
 1. 将项目使用git clone到本地
