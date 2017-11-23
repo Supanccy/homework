@@ -90,7 +90,6 @@ class ErWeiMa extends  Component{
                 <div className="img"></div>
                 <div className="title">手机浏览请扫二维码</div>
             </div>
-            // <div onClick={this.clickHuoJianBtn.bind(this)} className="up icon iconfontHuoJian" title="回到顶部" style={{display: this.state.show == true ? 'block' : 'none'}}>&#xe601;</div>
         )
     }
 }
