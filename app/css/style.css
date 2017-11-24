@@ -82,6 +82,7 @@ body{
     text-align: center;
     font-size: 12px;
     background: white;
+    color: #aaaaaa;
 }
 
 
@@ -885,8 +886,19 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block{
     margin-right: 16px;
     border: 1px solid #EEEEEE;
 }
+
+@-webkit-keyframes blockImg-animation {
+    0%  {
+        transform: scale(1,1)
+    }
+    100% {
+        transform: scale(1.2,1.2);
+    }
+}
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:hover{
     border: 1px solid #0081FF;
+    animation: blockImg-animation 1s ease-in-out 0s infinite alternate;
+
 }
 
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:hover .img{
