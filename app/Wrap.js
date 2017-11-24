@@ -86,11 +86,20 @@ class ErWeiMa extends  Component{
     clickHuoJianBtn(){
         document.getElementsByTagName('html')[0].scrollTop = 0;
     }
+
+    /**
+     * 关闭二维码
+     */
+    handCloseErWeiMa(){
+        $(".erweima").hide();
+    }
+
     render(){
         return(
             <div className="erweima">
+                <div onClick={this.handCloseErWeiMa.bind(this)} className="closeBtn icon  iconfont" >&#xe69a;</div>
                 <div className="img"></div>
-                <div className="title">手机浏览请扫二维码</div>
+                <div className="title">手机请扫二维码</div>
             </div>
         )
     }
