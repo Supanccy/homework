@@ -73,6 +73,7 @@ body{
     border-right: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     cursor: pointer;
+    color: #aaaaaa;
 }
 
 .erweima .title{
@@ -924,6 +925,12 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block>.detail{
     padding-right: 10px;
     padding-top: 7px;
     cursor: pointer;
+    overflow: hidden;
+    /*overflow:hidden;*/
+    /*word-wrap:normal;*/
+    /*white-space:nowrap;*/
+    text-overflow:ellipsis;
+
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block>.detail:hover{
     color: #0080ff;

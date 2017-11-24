@@ -9,6 +9,18 @@ import React, {Component} from 'react'
 var middleData = require('./middleData.json');
 class Middle extends Component{
 
+    /**
+     * 构造函数设置props和state属性
+     */
+    constructor(props){
+        super(props);
+        this.state = {
+            index: 1,
+            lunboTimer:null,
+            loginType:1
+        };
+    }
+
     //每隔3秒通过改变组件的status来更换背景图片
     componentDidMount(){
         var that = this;
@@ -24,21 +36,12 @@ class Middle extends Component{
     }
 
     /**
-     * 构造函数设置props和state属性
-     */
-    constructor(props){
-        super(props);
-        this.state = {
-            index: 1,
-        };
-    }
-
-    /**
-     * 点击轮播组件左侧按钮
+     * 点击轮播组件左侧按钮（再点击的时候，首先清空定时器，之后延时1s再开始定时器）；
      *  type:1 左侧按钮
      *       2 右侧按钮
      */
     handlelunboBtnClick(type){
+        clearInterval(this.state.lunboTimer);
         var no = 1;
         if(type == 1){ //左边按钮
             if(this.state.index == 1){
@@ -62,6 +65,12 @@ class Middle extends Component{
         this.setState({
             index:liIndex
         });
+    }
+
+    handSelectLoginType(type){
+        this.setState({
+            loginType:type
+        })
     }
 
     render() {
@@ -91,8 +100,8 @@ class Middle extends Component{
                         </div>
                         <div className="loginContainer">
                             <div className="title">
-                                <span className="active">我是采购商</span>
-                                <span>我是供应商</span>
+                                <span onClick={this.handSelectLoginType.bind(this,1)} className={this.state.loginType == 1 ? 'active' : ''}>我是采购商</span>
+                                <span onClick={this.handSelectLoginType.bind(this,2)} className={this.state.loginType == 2 ? 'active' : ''}>我是供应商</span>
                                 <span></span>
                             </div>
                             <div className="container">
