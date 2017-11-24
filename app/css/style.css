@@ -1245,6 +1245,7 @@ body .wrap>.middle>.cgzcContainer>.cgzc>.cgzc_content{
     box-sizing: border-box;
     position: relative;
     padding-top: 20px;
+    padding-bottom: 20px;
     overflow: hidden;
 }
 

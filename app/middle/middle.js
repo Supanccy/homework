@@ -15,6 +15,12 @@ class Middle extends Component{
         setInterval(function(){
             that.handlelunboBtnClick(2);
         },3000);
+        setInterval(function(){
+            $('.cgzc_content').animate({scrollTop:$('.bottomSymtom').offset().top}, 80000);
+            setTimeout(function(){
+                $('.cgzc_content').animate({scrollTop: '0px'}, 800);
+            },80500);
+        },6000);
     }
 
     /**
