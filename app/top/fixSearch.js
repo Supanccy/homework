@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 import styles from './fixSearch.less';//导入
 
+
 /**
  * 滚动条向下滚动超过120px显示在最顶端的搜索框组件
  */

@@ -40,7 +40,10 @@ class UpHuoJian extends  Component{
      * 点击火箭按钮处理函数
      */
     clickHuoJianBtn(){
-        document.getElementsByTagName('html')[0].scrollTop = 0;
+        // document.getElementsByTagName('html')[0].scrollTop = 0;
+        $("html").animate({
+            'scrollTop':0
+        },1000);
     }
     render(){
         return(

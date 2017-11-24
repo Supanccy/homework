@@ -73,8 +73,10 @@ module.exports = {
             title: '陈超阳-homework',
         }),
         new webpack.ProvidePlugin({
-            $:'jquery'
-        }),
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
 
         // new webpack.optimize.UglifyJsPlugin({
         //     compress: {
