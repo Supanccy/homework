@@ -162,7 +162,7 @@ class Middle extends Component{
                         <div className="loginContainer">
                             <div className="title">
                                 <span onClick={this.handSelectLoginType.bind(this,1)} className={this.state.loginType == 1 ? 'active' : ''}>我是采购商</span>
-                                <span onClick={this.handSelectLoginType.bind(this,2)} className={this.state.loginType == 2 ? 'active' : ''}>我是供应商</span>
+                                <span onClick={this.handSelectLoginType.bind(this,2)} className={this.state.loginType == 2 ? 'active2' : ''}>我是供应商</span>
                                 <span></span>
                             </div>
                             <div className="container">

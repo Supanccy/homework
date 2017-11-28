@@ -455,6 +455,12 @@ body .wrap>.middle>.ad>.rightLogin>.loginContainer>.title>.active{
     border-bottom:0;
     background: #FFFFFF;
 }
+body .wrap>.middle>.ad>.rightLogin>.loginContainer>.title>.active2{
+    border-top: 2px solid #0081FE;
+    border-left: 0;
+    border-bottom:0;
+    background: #FFFFFF;
+}
 body .wrap>.middle>.ad>.rightLogin>.loginContainer>.container{
     height: 136px;
     background-image: url("../images/loginContainer.png");
@@ -1267,7 +1273,6 @@ body .wrap>.middle>.cgzcContainer>.cgzc>.cgzc_content{
     padding-bottom: 20px;
     overflow: hidden;
 }
-
 body .wrap>.middle>.cgzcContainer>.cgzc>.cgzc_content .bottomSymtom{
     display: inline-block;
     height:0;
