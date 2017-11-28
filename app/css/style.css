@@ -1285,7 +1285,7 @@ body .wrap>.middle>.cgzcContainer>.cgzc>.cgzc_content>ul{
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 body .wrap>.middle>.cgzcContainer>.cgzc>.cgzc_content>ul>li{
     position: relative;

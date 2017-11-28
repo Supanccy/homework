@@ -91,7 +91,7 @@ class ErWeiMa extends  Component{
      * 关闭二维码
      */
     handCloseErWeiMa(){
-        $(".erweima").hide();
+        $(".erweima").hide(600);
     }
 
     render(){

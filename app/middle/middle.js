@@ -24,15 +24,52 @@ class Middle extends Component{
     //每隔3秒通过改变组件的status来更换背景图片
     componentDidMount(){
         var that = this;
-        setInterval(function(){
-            that.handlelunboBtnClick(2);
+        that.state.lunboTimer = setInterval(function(){
+            var no = 1;
+            if(that.state.index == 5){
+                no = 1;
+            }else{
+                no = that.state.index + 1
+            }
+            that.setState({
+                index:no
+            });
         },2000);
-        setInterval(function(){
-            $('.cgzc_content').animate({scrollTop:$('.bottomSymtom').offset().top}, 80000);
-            setTimeout(function(){
-                $('.cgzc_content').animate({scrollTop: '0px'}, 800);
-            },80500);
-        },6000);
+
+
+        // this.setState({
+        //     lunboTimer: setInterval(function(){
+        //         that.handlelunboBtnClick(2);
+        //     },2000)
+        // })
+
+
+        $('.cgzc_content').animate({scrollTop:"100px"}, 9000,"linear");
+        $('.cgzc_content').animate({scrollTop: '0px'}, 1800);
+        // setTimeout(function(){
+        //     $('.cgzc_content').animate({scrollTop: '0px'}, 1800);
+        // },22000);
+
+        // setInterval(function(){
+        //     $('.cgzc_content').animate({scrollTop:$('.bottomSymtom').offset().top}, 80000);
+        //     setTimeout(function(){
+        //         $('.cgzc_content').animate({scrollTop: '0px'}, 800);
+        //     },28000);
+        // },30000);
+    }
+
+    /**
+     *  停止采购政策自动滚动
+     */
+    handStopAutoScroll(){
+        $('.cgzc_content').stop();
+    }
+
+    /**
+     * 开始自动滚动
+     */
+    handReStartAutoScroll(){
+        $('.cgzc_content').animate({scrollTop:$('.bottomSymtom').offset().top}, 80000);
     }
 
     /**
@@ -41,7 +78,11 @@ class Middle extends Component{
      *       2 右侧按钮
      */
     handlelunboBtnClick(type){
-        clearInterval(this.state.lunboTimer);
+
+        if(this.state.lunboTimer != null){
+            clearInterval(this.state.lunboTimer);
+        }
+
         var no = 1;
         if(type == 1){ //左边按钮
             if(this.state.index == 1){
@@ -62,6 +103,7 @@ class Middle extends Component{
     }
 
     handlelunboListBtnClick(liIndex){
+        this.lunboMouseOver();
         this.setState({
             index:liIndex
         });
@@ -73,20 +115,39 @@ class Middle extends Component{
         })
     }
 
+    /**
+     * 轮播组件左右按钮鼠标移走时间
+     *  type:1 左侧按钮
+     *       2 右侧按钮
+     */
+    lunboMouseLeave(type){
+        if(type == 1){//左侧按钮
+            this.componentDidMount();
+        }else if(type == 2){//右侧按钮
+            this.componentDidMount();
+        }
+    }
+
+    lunboMouseOver(){
+        if(this.state.lunboTimer != null){
+            clearInterval(this.state.lunboTimer);
+        }
+    }
+
     render() {
         return (
             <div className="middle">
                 <div className="ad">
                     <div className={"leftImg adImg" + this.state.index }>
-                        <span className="leftBtn icon iconfont"  onClick={this.handlelunboBtnClick.bind(this,1)}>&#xe697;</span>
-                        <span className="rightBtn icon iconfont" onClick={this.handlelunboBtnClick.bind(this,2)}>&#xe6a7;</span>
+                        <span className="leftBtn icon iconfont"  onMouseOver={this.lunboMouseOver.bind(this,1)}  onClick={this.handlelunboBtnClick.bind(this,1)} onMouseLeave={this.lunboMouseLeave.bind(this,1)}>&#xe697;</span>
+                        <span className="rightBtn icon iconfont" onMouseOver={this.lunboMouseOver.bind(this,2)}  onClick={this.handlelunboBtnClick.bind(this,2)} onMouseLeave={this.lunboMouseLeave.bind(this,2)}>&#xe6a7;</span>
                         <div className="listBtn">
                             <ul>
-                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,1)}  className={this.state.index == 1 ? 'active' : ''}></li>
-                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,2)}  className={this.state.index == 2 ? 'active' : ''}></li>
-                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,3)}  className={this.state.index == 3 ? 'active' : ''}></li>
-                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,4)}  className={this.state.index == 4 ? 'active' : ''}></li>
-                                <li onMouseOver={this.handlelunboListBtnClick.bind(this,5)}  className={this.state.index == 5 ? 'active' : ''}></li>
+                                <li onMouseLeave={this.lunboMouseLeave.bind(this,1)} onMouseOver={this.handlelunboListBtnClick.bind(this,1)}  className={this.state.index == 1 ? 'active' : ''}></li>
+                                <li onMouseLeave={this.lunboMouseLeave.bind(this,1)} onMouseOver={this.handlelunboListBtnClick.bind(this,2)}  className={this.state.index == 2 ? 'active' : ''}></li>
+                                <li onMouseLeave={this.lunboMouseLeave.bind(this,1)} onMouseOver={this.handlelunboListBtnClick.bind(this,3)}  className={this.state.index == 3 ? 'active' : ''}></li>
+                                <li onMouseLeave={this.lunboMouseLeave.bind(this,1)} onMouseOver={this.handlelunboListBtnClick.bind(this,4)}  className={this.state.index == 4 ? 'active' : ''}></li>
+                                <li onMouseLeave={this.lunboMouseLeave.bind(this,1)} onMouseOver={this.handlelunboListBtnClick.bind(this,5)}  className={this.state.index == 5 ? 'active' : ''}></li>
                             </ul>
                         </div>
                     </div>
@@ -239,7 +300,7 @@ class Middle extends Component{
                               </div>
                           </div>
                           <div className="cgzc_content">
-                              <ul>
+                              <ul onMouseMove={this.handStopAutoScroll.bind(this)} onMouseLeave={this.handReStartAutoScroll.bind(this)}>
                                   {this.props.cgzc.map(
                                       function(item,i){
                                           return <li key={i}><span>{item.title}</span><span>{item.timestamp}</span></li>
