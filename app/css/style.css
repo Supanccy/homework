@@ -922,7 +922,7 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block>.img{
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block>.detail{
     box-sizing: border-box;
-    height: 44px;
+    height: 40px;
     word-wrap:break-word;
     word-break:break-all;
     font-size: 12px;
@@ -1009,7 +1009,7 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block>.address>span:last-child
     background-image: url("../images/tianmao.png");
     background-repeat: no-repeat;
     background-size: auto 45%;
-    background-position: 45% center;
+    background-position: 25% center;
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line:first-child>.block:nth-child(2)>.img{
     background-image: url("../images/thing2.png");
@@ -1020,25 +1020,25 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:nth-child(2)>.address>sp
     background-image: url("../images/guomei.png");
     background-repeat: no-repeat;
     background-size: auto 45%;
-    background-position: 50% center;
+    background-position: 40% center;
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:nth-child(3)>.address>span:last-child{
     background-image: url("../images/jingdong.png");
     background-repeat: no-repeat;
     background-size: auto 45%;
-    background-position: 60% center;
+    background-position: 50% center;
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:nth-child(4)>.address>span:last-child{
     background-image: url("../images/suning.png");
     background-repeat: no-repeat;
     background-size: auto 45%;
-    background-position: 45% center;
+    background-position: 17% center;
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:nth-child(5)>.address>span:last-child{
     background-image: url("../images/ali.png");
     background-repeat: no-repeat;
     background-size: auto 45%;
-    background-position: 60% center;
+    background-position: 50% center;
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line:first-child>.block:nth-child(3)>.img{
     background-image: url("../images/thing3.png");
