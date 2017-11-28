@@ -105,6 +105,26 @@ class ErWeiMa extends  Component{
     }
 }
 
+/**
+ * 二维码组件
+ */
+class LeftArea extends  Component{
+    render(){
+        return(
+            <div className="leftArea">
+                <ul>
+                    <li title="账号" className="leftAreaiconfont">&#xe6a3;</li>
+                    <li title="喜欢" className="leftAreaiconfont">&#xe628;</li>
+                    <li title="金钱" className="leftAreaiconfont">&#xe6cb;</li>
+                    <li title="限时优惠" className="leftAreaiconfont">&#xe6b7;</li>
+                    <li title="购物车" className="leftAreaiconfont">&#xe68e;</li>
+                    <li title="刷新" className="leftAreaiconfont">&#xe6a0;</li>
+                </ul>
+            </div>
+        )
+    }
+}
+
 class Wrap extends Component{
 
     componentWillMount(){
@@ -114,6 +134,7 @@ class Wrap extends Component{
     render() {
         return (
             <div>
+                <LeftArea />
                 <ErWeiMa />
                 <UpHuoJian />
                 <FixSearch />
