@@ -106,7 +106,7 @@ class ErWeiMa extends  Component{
 }
 
 /**
- * 二维码组件
+ * 左侧快捷入口
  */
 class LeftArea extends  Component{
 
