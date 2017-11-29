@@ -51,7 +51,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 200px;
+    height: 336px;
     top: 50%;
     left: 0;
     margin-top: -230px;
@@ -92,7 +92,7 @@ body{
 }
 .leftAreaLiSpanAnimation{
     animation-name:leftAreaLiSpan;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function:infinite;
     animation-delay: 0s;
     animation-iteration-count:1;
@@ -130,6 +130,19 @@ body{
     border: 1px solid #BBBBBB;
 }
 
+
+@-webkit-keyframes erweima-frame {
+    0%  {
+        transform:rotate(7deg);
+    }
+    100% {
+        transform:rotate(-7deg);
+    }
+}
+.erweimaAnimation{
+    animation: erweima-frame 3s linear  infinite alternate;
+}
+
 .erweima{
     position: fixed;
     top: 40px;
@@ -153,7 +166,8 @@ body{
     width: 16px;
     height: 16px;
     top: -18px;
-    left: -1px;
+    left: 50%;
+    margin-left: -8px;
     background: white;
     border-top: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
@@ -991,9 +1005,12 @@ body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block{
     }
 }
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:hover{
-    border: 1px solid #0081FF;
-    animation: blockImg-animation 1s ease-in-out 0s infinite alternate;
+    /*border: 1px solid #0081FF;*/
 }
+.blockChangeBig{
+    animation: blockImg-animation 6s ease-in-out 0s infinite alternate;
+}
+
 
 body .wrap>.middle>.mqtjbp>.mqtjbp_content>.line>.block:hover .img{
     background-size: 110% 110%;

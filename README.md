@@ -42,6 +42,12 @@
 4. 登录区域的二级菜单，如下图：
 ![](./showImg/login2level.gif)
 
+5. 左侧固定快捷入口
+![](./showImg/leftArea.gif)
+
+6. 旋转动态的二维码
+![](./showImg/erweimadongtai.gif)
+
 [项目显示地址（内外网均可访问）](http://112.74.36.152/homework/build/index.html)
 
 ## 六 作者联系方式

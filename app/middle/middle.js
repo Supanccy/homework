@@ -225,7 +225,7 @@ class Middle extends Component{
                             function(item,i){
                                 return <div className="line" key={i}>{
                                     item.map(function(subitem,j){
-                                        return <div  title={subitem.detail} className="block" key={j}>
+                                        return <div title={subitem.detail} className="block" key={j}>
                                             <div className="img" title={subitem.detail}></div>
                                             <div className="detail">
                                                 {subitem.detail}
@@ -239,9 +239,9 @@ class Middle extends Component{
                                                 <span>{subitem.address.rightContent}</span>
                                             </div>
                                         </div>
-                                    })
+                                    },this)
                                 }</div>
-                            }
+                            },this
                         )}
                     </div>
                 </div>

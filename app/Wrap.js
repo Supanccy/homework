@@ -96,7 +96,7 @@ class ErWeiMa extends  Component{
 
     render(){
         return(
-            <div className="erweima">
+            <div className="erweima erweimaAnimation">
                 <div onClick={this.handCloseErWeiMa.bind(this)} className="closeBtn icon  iconfont" >&#xe69a;</div>
                 <div className="img"></div>
                 <div className="title">手机请扫二维码</div>
@@ -116,6 +116,11 @@ class LeftArea extends  Component{
     handMouseOut(liIndex){
         $(".leftArea>ul>li>span").eq(liIndex).show().removeClass("leftAreaLiSpanAnimation");
         $(".leftArea>ul>li>span").eq(liIndex).hide();
+    }
+    handClick(){
+        $("html").animate({
+            'scrollTop':0
+        },1000);
     }
 
     render(){
@@ -139,6 +144,9 @@ class LeftArea extends  Component{
                     </li>
                     <li onMouseOut={this.handMouseOut.bind(this,5)} onMouseOver={this.handMouseOver.bind(this,5)} className="leftAreaiconfont">&#xe6a0;
                         <span>刷新</span>
+                    </li>
+                    <li onMouseOut={this.handMouseOut.bind(this,6)} onMouseOver={this.handMouseOver.bind(this,6)} className="leftAreaiconfont" onClick={this.handClick.bind(this)}>&#xe6fd;
+                        <span>回顶部</span>
                     </li>
                 </ul>
             </div>
