@@ -21,7 +21,7 @@ module.exports = {
         //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
         historyApiFallback:true,
         //port 设置默认监听端口，如果省略，默认为”8080“
-        port:8080,
+        port:8088,
         //inline 设置为true，当源文件改变时会自动刷新页面
         inline:true
     },

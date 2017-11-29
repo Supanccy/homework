@@ -57,12 +57,47 @@ body{
     margin-top: -230px;
 }
 .leftArea>ul>li{
+    position: relative;
     height: 48px;
     cursor: pointer;
-    /*background: green;*/
+}
+.leftArea>ul>li>span{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 26px;
+    margin-top: -50%;
+    height: 60%;
+    width: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background: white;
+    color: #333333;
+    font-size: 14px;
+    line-height: 30px;
 }
 .leftArea>ul>li:hover{
     background: #0080FE;
+}
+
+@keyframes leftAreaLiSpan{
+    0%   {
+        display: none;
+        width: 40px;
+    }
+    100% {
+        display: inline-block;
+        width: 100px;
+    }
+}
+.leftAreaLiSpanAnimation{
+    animation-name:leftAreaLiSpan;
+    animation-duration: 1s;
+    animation-timing-function:infinite;
+    animation-delay: 0s;
+    animation-iteration-count:1;
+    animation-direction:normal;
+    animation-fill-mode:forwards;
 }
 
 @font-face {font-family: "iconfontHj";

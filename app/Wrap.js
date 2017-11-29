@@ -109,16 +109,37 @@ class ErWeiMa extends  Component{
  * 二维码组件
  */
 class LeftArea extends  Component{
+
+    handMouseOver(liIndex){
+        $(".leftArea>ul>li>span").eq(liIndex).show().addClass("leftAreaLiSpanAnimation");
+    }
+    handMouseOut(liIndex){
+        $(".leftArea>ul>li>span").eq(liIndex).show().removeClass("leftAreaLiSpanAnimation");
+        $(".leftArea>ul>li>span").eq(liIndex).hide();
+    }
+
     render(){
         return(
             <div className="leftArea">
                 <ul>
-                    <li title="账号" className="leftAreaiconfont">&#xe6a3;</li>
-                    <li title="喜欢" className="leftAreaiconfont">&#xe628;</li>
-                    <li title="金钱" className="leftAreaiconfont">&#xe6cb;</li>
-                    <li title="限时优惠" className="leftAreaiconfont">&#xe6b7;</li>
-                    <li title="购物车" className="leftAreaiconfont">&#xe68e;</li>
-                    <li title="刷新" className="leftAreaiconfont">&#xe6a0;</li>
+                    <li onMouseOut={this.handMouseOut.bind(this,0)} onMouseOver={this.handMouseOver.bind(this,0)} className="leftAreaiconfont">&#xe6a3;
+                        <span>账号</span>
+                    </li>
+                    <li onMouseOut={this.handMouseOut.bind(this,1)} onMouseOver={this.handMouseOver.bind(this,1)} className="leftAreaiconfont">&#xe628;
+                        <span>喜欢</span>
+                    </li>
+                    <li onMouseOut={this.handMouseOut.bind(this,2)} onMouseOver={this.handMouseOver.bind(this,2)} className="leftAreaiconfont">&#xe6cb;
+                        <span>金钱</span>
+                    </li>
+                    <li onMouseOut={this.handMouseOut.bind(this,3)} onMouseOver={this.handMouseOver.bind(this,3)} className="leftAreaiconfont">&#xe6b7;
+                        <span>限时</span>
+                    </li>
+                    <li onMouseOut={this.handMouseOut.bind(this,4)} onMouseOver={this.handMouseOver.bind(this,4)} className="leftAreaiconfont">&#xe68e;
+                        <span>购物车</span>
+                    </li>
+                    <li onMouseOut={this.handMouseOut.bind(this,5)} onMouseOver={this.handMouseOver.bind(this,5)} className="leftAreaiconfont">&#xe6a0;
+                        <span>刷新</span>
+                    </li>
                 </ul>
             </div>
         )
