@@ -4,10 +4,10 @@
 手机端访问请扫描下面二维码  
 ![](./showImg/erweima.png)
 
-
 ## 一 运行说明
 1. 将项目使用git clone到本地
-2. 本地安装node环境
+2. 本地安装node环境，我本地环境如下图：
+    ![](./showImg/loca_huanjing.png)
 3. 执行 npm install 安装项目所需要的依赖
 4. 执行 npm run server 进行实时热加载开发
 5. 打包执行 npm start
@@ -21,7 +21,6 @@
 3. 使用**less**的css预编译技术
 4. 使用**es6**进行代码编写
 5. 阿里的**iconfnt**图标库
-
 
 ## 四 组件结构
 1. 整个页面分为三个部分：顶部、中部、底部。
