@@ -1,8 +1,8 @@
 # 项目说明文档
 恭喜：本项目在公司前端大赛中荣获一等奖。
-[PC端访问地址（内外网均可访问）](http://112.74.36.152/homework/build/index.html)
+[PC端访问地址（能否访问取决于云服务器是否在租用起内）](http://112.74.36.152/homework/build/index.html)
   
-手机端访问请扫描下面二维码  
+手机端访问请扫描下面二维码（能否访问取决于云服务器是否在租用起内）  
 ![](./showImg/erweima.png)
 
 ## 一 运行说明
@@ -12,6 +12,7 @@
 3. 执行 npm install 安装项目所需要的依赖
 4. 执行 npm run server 进行实时热加载开发
 5. 打包执行 npm start
+6. 启动成功后，本地访问地址：http://localhost:8088/
 
 ## 二 目录结构说明
 ![](./showImg/mulu.png)
