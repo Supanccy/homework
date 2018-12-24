@@ -23,7 +23,9 @@ module.exports = {
         //port 设置默认监听端口，如果省略，默认为”8080“
         port:8088,
         //inline 设置为true，当源文件改变时会自动刷新页面
-        inline:true
+        inline:true,
+        //加上host就可以通过本机ip地址访问
+        host:'0.0.0.0'
     },
     module: {
         rules: [
