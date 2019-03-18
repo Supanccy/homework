@@ -12,7 +12,7 @@
 3. 执行 npm install 安装项目所需要的依赖
 4. 执行 npm run server 进行实时热加载开发
 5. 打包执行 npm start
-6. 启动成功后，本地访问地址：http://localhost:8088/
+6. 启动成功后，本地访问地址：http://localhost:8099/
 
 ## 二 目录结构说明
 ![](./showImg/mulu.png)
